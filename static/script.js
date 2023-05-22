@@ -202,7 +202,7 @@ loginform.addEventListener('submit', function(e) {
     if (data.match("correct")) {
       // alert('cccc')
 
-      loginMain.innerHTML = '<div style="color: green;"><h2>Welcome to Demo Digital Twin platform</h2></div>'; // Hiển thị phản hồi trong phần tử <p>
+      loginMain.innerHTML = '<div style="color: green;"><h2>Demo Digital Platform</h2></div>'; // Hiển thị phản hồi trong phần tử <p>
     // Thêm sự kiện click cho các link
 homeLink.addEventListener("click", function(e) {
   e.preventDefault(); // Ngăn chặn trình duyệt đi đến URL trong href
@@ -295,6 +295,7 @@ formloadfile.addEventListener('submit', function(e) {
     // }
 //     // / Xử lý phản hồi từ Flask
     const fileList = document.getElementById('file-list');
+    fileList.innerHTML = '';
     data.forEach(filename => {
       const listItem = document.createElement('li');
       listItem.textContent = filename;
