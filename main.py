@@ -75,9 +75,10 @@ def uploadInfo():
         #df_raman_full = pd.concat([pd.DataFrame(df_cus_ID, columns=['Cust']), pd.DataFrame(df_pro_ID, columns=['Project_ID']), pd.DataFrame(df_batch_ID, columns=['BatchID']),
         #                    df_raman], axis=1)
         
-        df_operation_full.to_csv(file_path_operation)
+        df_operation_full.to_csv(file_path_operation,index = False)
         #df_raman_full.to_csv(file_path_raman)
         # print(df_operation_full.head())
+        print(df_operation_full)
         alert = upload_To_BlobStorage(file_path_raman, filename_raman,container_name='siprammandata')
         alert = upload_To_BlobStorage(file_path_operation, filename_operation,container_name='siprawdata')
 
